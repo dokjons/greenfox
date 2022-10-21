@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfox - Guadua</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/site.webmanifest">
+    <link href="../../fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gill-sans-nova" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/playfair-display-sc" rel="stylesheet">
+    <script src="../../scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="burger-menu" onclick="toggleMenu();">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="flex-divider"></div>
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="flex-divider"></div>
+        <div class="cart-icon" id="cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+    <div class="clothing-menu" id="clothMenu">
+        <div class="clothing-wrapper">
+            <div class="close-menu">
+                <div class="close-menu-icon" onclick="toggleMenu();">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="flex-divider"></div>
+            </div>
+            <div class="flex-divider"></div>
+            <div class="cat-items">
+                <p><button type="button" class="main-cat" onclick="collapseDameMand();">&mdash;&#10240;Shop</button></p>
+                <p class="margin-minus"><button type="button" class="upper-cat cat-shop" id="dame-tag" onclick="collapseDame();">Dame</button></p>
+                <p><a class="under-cat dame" href="../../produktkategorier/produktkategori-kjoler.html">Kjoler</a></p>
+                <p><a class="under-cat dame" href="#">T-shirts og toppe</a></p>
+                <p><a class="under-cat dame" href="#">Bluser</a></p>
+                <p><a class="under-cat dame" href="#">Bukser</a></p>
+                <p><a class="under-cat dame" href="#">Strik og pullover</a></p>
+                <p><a class="under-cat dame" href="#">Halstørklæder</a></p>
+                <p class="margin-minus"><button type="button" class="upper-cat cat-shop" id="herre-tag">Herre</button></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Mine farvoritter</a></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Udforsk bambus</a></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Udforsk Green Fox</a></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Bæredygtig fremstilling</a></p>
+                <p><button type="button" class="main-cat" onclick="toggleSearch();">&mdash;&#10240;Søg</button></p>
+            </div>
+            <div class="flex-divider"></div>
+            <div class="cat-items">
+                <p><a class="main-cat collapsible" href="#">&mdash;&#10240;Kontakt os</a></p>
+                <p><a class="main-cat collapsible" href="#">&mdash;&#10240;Fragt og returnering</a></p>
+                <p><a class="main-cat collapsible" href="#">&mdash;&#10240;Log ind</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="search-menu" id="searchMenu">
+        <div class="search-wrapper">
+            <div class="close-menu">
+                <div class="close-menu-icon" onclick="toggleSearch();">
+                    <i class="fa-solid fa-caret-left"></i>
+                </div>
+                <div class="flex-divider"></div>
+                <input id="item-search-id" class="item-search" onkeyup="searchItem();" type="text" placeholder="Indtast dit søgeord">
+                <div class="flex-divider"></div>
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="search-content">
+                <ul class="result-list">
+                    <li class="result-items">
+                        <a href="guadua.html">
+                            <img src="../../images/frontpage/cloth/Guadua.png" alt="Guadua">
+                            <p>Guadua</p>
+                            <p>800 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Olmeca.png" alt="Olmeca">
+                            <p>Olmeca</p>
+                            <p>900 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Fargesia.png" alt="Fargesia">
+                            <p>Fargesia</p>
+                            <p>875 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Hickelia.png" alt="Hickelia">
+                            <p>Hickelia</p>
+                            <p>800 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Melocanna.png" alt="Melocanna">
+                            <p>Melocanna</p>
+                            <p>850 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Bambusa.png" alt="Bambusa">
+                            <p>Bambusa</p>
+                            <p>850 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Otatea.png" alt="Otatea">
+                            <p>Otatea</p>
+                            <p>900 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Trifina.png" alt="Trifina">
+                            <p>Trifina</p>
+                            <p>775 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Alvimia.png" alt="Alvimia">
+                            <p>Alvimia</p>
+                            <p>800 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="">
+                            <img src="../../images/frontpage/cloth/Sasa.png" alt="Sasa">
+                            <p>Sasa</p>
+                            <p>875 kr</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        <div class="path">
+            <p><a href="../../kategori-dame.html">Dame</a>&#10240;&gt;&#10240;<a href="../../produktkategorier/produktkategori-kjoler.html">Kjoler</a>&#10240;&gt;&#10240;<a href="#">Guadua</a></p>
+        </div>
+        <div class="big-img">
+            <img id="bigImg" class="mySlides" src="../../images/produkter/guadua/slideshow/slide1.png" alt="Guadua">
+            <img id="bigImg" class="mySlides" src="../../images/produkter/guadua/slideshow/slide2.png" alt="Guadua2">
+            <img id="bigImg" class="mySlides" src="../../images/produkter/guadua/slideshow/slide3.png" alt="Guadua3">
+            <img id="bigImg" class="mySlides" src="../../images/produkter/guadua/slideshow/slide4.png" alt="Guadua4">
+            <img id="bigImg" class="mySlides" src="../../images/produkter/guadua/slideshow/slide5.png" alt="Guadua5">
+            <button class="slide-left" onclick="plusDivs(-1);">&#8810;</button>
+            <button class="slide-right" onclick="plusDivs(1);">&#8811;</button>
+            <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class="big-img-text">
+            <p>Guadua</p>
+            <p>800 Kr</p>
+        </div>
+        <div class="small-img">
+            <img id="sand" src="../../images/produkter/guadua/sand-dress.png" alt="Guadua-Sand" onclick="changeSand();">
+            <img id="rose" src="../../images/produkter/guadua/rose-dress.png" alt="Guadua-Rose" onclick="changeRose();">
+            <img id="white" src="../../images/produkter/guadua/white-dress.png" alt="Guadua-White" onclick="changeWhite();">
+            <img id="mint" src="../../images/produkter/guadua/mint-dress.png" alt="Guadua-Mint" onclick="changeMint();">
+        </div>
+        <div class="size-amount-container">
+            <button type="button" class="size" id="selected-size" onclick="selectSize();">Str</button>
+            <div id="select-size">
+                <button type="button" onclick="size34();">34</button>
+                <button type="button" onclick="size36();">36</button>
+                <button type="button" onclick="size38();">38</button>
+                <button type="button" onclick="size40();">40</button>
+            </div>
+            <div class="amount">
+                <button type="button" class="minus-wrapper" id="min-btn" onclick="mValue();">
+                    <div class="minus">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                </button>
+                <input id="num-id" type="number" min="1" max="999999" placeholder="1" value="1">
+                <button type="button" class="plus-wrapper" id="plus-btn" onclick="pValue();">
+                    <div class="plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <button class="add-to-cart">Tilføj til kurv</button>
+        <div class="collapse-wrapper">
+            <p class="pre-collapse-title">Beskrivelse</p>
+            <p class="pre-collapse-text">Guadua er en klassisk, stilren og tidsløs kjole, der passer til den langtidsholdbare garderobe.</p>
+            <p class="pre-collapse-text">De tynde stropper bridrager til et eksklusivt look, med delikat stof lavet af bambussorten Guadua. Den åbne ryg giver kjolen et let og feminint præg og værner om de naturlige linjer vi arbejder med hos Green Fox.</p>
+            <p class="pre-collapse-text">Kjolen fungerer godt til flere årstider og kan bruges med en jakke og busker om vinteren og helt for sig selv i de varme måneder.</p>
+            <p class="pre-collapse-text">Guadua kjolen er håndlavet og fremstillet i Cambodia.</p>
+        </div>
+        <div class="collapsible-wrapper">
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label for="collapsible" class="lbl-toggle">Materiale</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <p>65% Bambus viskose</p>
+                    <p>30% Økologisk bomuld</p>
+                    <p>5% Elastan</p>
+                    <p>OEKO-TEX Certificeret Standard 100 (976-15301)</p>
+                    <p>100% genanvendt plastik</p>
+                    <p>FSC MIX certificeret bambus</p>    
+                </div>
+            </div>
+        </div>
+        <div class="collapsible-wrapper2 collap-mid">
+            <input id="collapsible2" class="toggle2" type="checkbox">
+            <label for="collapsible2" class="lbl-toggle2">Størrelse og pasform</label>
+            <div class="collapsible-content2">
+                <div class="content-inner2">
+                    <p>Størrelse info</p>  
+                    <p>Pasform info</p>
+                </div>
+            </div>
+        </div>
+        <div class="collapsible-wrapper3">
+            <input id="collapsible3" class="toggle3" type="checkbox">
+            <label for="collapsible3" class="lbl-toggle3">Vask og pleje</label>
+            <div class="collapsible-content3">
+                <div class="content-inner3">
+                    <p>Vaske info</p>
+                    <p>Pleje info</p>   
+                </div>
+            </div>
+        </div>
+        <div class="community">
+            <p>Bliv en del af fællesskabet</p>
+            <img src="../../images/produkter/extra/unity.jpg" alt="unity" class="unity">
+            <p>Hos Green Fox er vi glade for at byde dig velkommen i vores bæredygtige univers!</p>
+            <div class="medlem">
+                <a href="#">Bliv medlem</a>
+            </div>
+            <div class="community-twoImg">
+                <img src="../../images/produkter/extra/girl-with-hat.png" alt="girl-with-hat">
+                <img src="../../images/produkter/extra/white-tshirt-k3.png" alt="white-tshirt-k3">
+            </div>
+            <p class="del-gf">Bliv en del af Green Fox</p>
+            <p class="del-gf2">Del dine Green Fox oplevelser med os!</p>
+        </div>
+        <div class="more-wrapper">
+            <p>Mere i samme stil:</p>
+            <div class="more-imges">
+                <img src="../../images/produkter/extra/2x-dress1.png" alt="2x-dress1">
+                <img src="../../images/produkter/extra/white-dress2.png" alt="white-dress2">
+                <img src="../../images/produkter/extra/yellow-dress.png" alt="yellow-dress">
+                <img src="../../images/produkter/extra/soft-white-vneck-dress.png" alt="soft-white-dress">
+            </div>
+        </div>
+
+        <footer>
+            <img src="../../images/logo.png" alt="logo">
+            <p class="logo-title">Green Fox</p>
+            <div class="contact">
+                <p class="first-text">Online Support:</p>
+                <p><a href="tel:+4523689764">+45 23 68 97 64</a></p>
+                <p><a href="mailto:info@greenfox.dk?subject=Spørgsmål&#10240;til&#10240;Greenfox">info@greenfox.dk</a></p>
+            </div>
+            <div class="terms">
+                <p class="first-text">Læs om handelsbetingerlser <a class="here-link" href="">her</a></p>
+                <p>Læs om fragt og returnering <a class="here-link" href="">her</a></p>
+            </div>
+            <div class="subscribe">
+                <p class="first-text">Subscribe</p>
+                <p>og del din oplevelser med os på:</p>
+            </div>
+            <div class="social-media">
+                <div class="flex-divider"></div>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <div class="flex-divider"></div>
+            </div>
+        </footer>
+    </div>
+    <div class="nav-container">
+        <nav class="nav-wrapper">
+            <div class="nav-bar">
+                <div class="nav-back-wrapper">
+                    <a href="javascript:history.back()">  
+                        <div class="nav-cat nav-cat-5items back">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-cat nav-cat-5items search" onclick="toggleSearch();">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="nav-cat nav-cat-5items home">
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </div>
+                <div class="nav-cat nav-cat-5items profile">
+                    <a href="">
+                        <i class="fa-solid fa-user"></i>
+                    </a> 
+                </div>
+                <div class="nav-cat nav-cat-5items like">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body> 
+</html> 

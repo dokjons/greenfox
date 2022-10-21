@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfox - Dame</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gill-sans-nova" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/playfair-display-sc" rel="stylesheet">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="burger-menu" onclick="toggleMenu();">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="flex-divider"></div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="flex-divider"></div>
+        <div class="cart-icon">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+    <div class="clothing-menu" id="clothMenu">
+        <div class="clothing-wrapper">
+            <div class="close-menu">
+                <div class="close-menu-icon" onclick="toggleMenu();">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="flex-divider"></div>
+            </div>
+            <div class="flex-divider"></div>
+            <div class="cat-items">
+                <p><button type="button" class="main-cat" onclick="collapseDameMand();">&mdash;&#10240;Shop</button></p>
+                <p class="margin-minus"><button type="button" class="upper-cat cat-shop" id="dame-tag" onclick="collapseDame();">Dame</button></p>
+                <p><a class="under-cat dame" href="produktkategorier/produktkategori-kjoler.html">Kjoler</a></p>
+                <p><a class="under-cat dame" href="">T-shirts og toppe</a></p>
+                <p><a class="under-cat dame" href="">Bluser</a></p>
+                <p><a class="under-cat dame" href="">Bukser</a></p>
+                <p><a class="under-cat dame" href="">Strik og pullover</a></p>
+                <p><a class="under-cat dame" href="">Halstørklæder</a></p>
+                <p class="margin-minus"><button type="button" class="upper-cat cat-shop" id="herre-tag">Herre</button></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Mine farvoritter</a></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Udforsk bambus</a></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Udforsk Green Fox</a></p>
+                <p><a class="main-cat" href="#">&mdash;&#10240;Bæredygtig fremstilling</a></p>
+                <p><button type="button" class="main-cat" onclick="toggleSearch();">&mdash;&#10240;Søg</button></p>
+            </div>
+            <div class="flex-divider"></div>
+            <div class="cat-items">
+                <p><a class="main-cat collapsible" href="#">&mdash;&#10240;Kontakt os</a></p>
+                <p><a class="main-cat collapsible" href="#">&mdash;&#10240;Fragt og returnering</a></p>
+                <p><a class="main-cat collapsible" href="#">&mdash;&#10240;Log ind</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="search-menu" id="searchMenu">
+        <div class="search-wrapper">
+            <div class="close-menu">
+                <div class="close-menu-icon" onclick="toggleSearch();">
+                    <i class="fa-solid fa-caret-left"></i>
+                </div>
+                <div class="flex-divider"></div>
+                <input id="item-search-id" class="item-search" onkeyup="searchItem();" type="text" placeholder="Indtast dit søgeord">
+                <div class="flex-divider"></div>
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="search-content">
+                <ul class="result-list">
+                    <li class="result-items">
+                        <a href="produktsider/kjoler/guadua.html">
+                            <img src="images/frontpage/cloth/Guadua.png" alt="Guadua">
+                            <p>Guadua</p>
+                            <p>800 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Olmeca.png" alt="Olmeca">
+                            <p>Olmeca</p>
+                            <p>900 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Fargesia.png" alt="Fargesia">
+                            <p>Fargesia</p>
+                            <p>875 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Hickelia.png" alt="Hickelia">
+                            <p>Hickelia</p>
+                            <p>800 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Melocanna.png" alt="Melocanna">
+                            <p>Melocanna</p>
+                            <p>850 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Bambusa.png" alt="Bambusa">
+                            <p>Bambusa</p>
+                            <p>850 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Otatea.png" alt="Otatea">
+                            <p>Otatea</p>
+                            <p>900 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Trifina.png" alt="Trifina">
+                            <p>Trifina</p>
+                            <p>775 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Alvimia.png" alt="Alvimia">
+                            <p>Alvimia</p>
+                            <p>800 kr</p>
+                        </a>
+                    </li>
+                    <li class="result-items">
+                        <a href="#">
+                            <img src="images/frontpage/cloth/Sasa.png" alt="Sasa">
+                            <p>Sasa</p>
+                            <p>875 kr</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        <div class="sortFilter">
+            <p>Sorter</p>
+            <p>Filtrer</p>
+        </div>
+        <div class="dame-text">
+            <p>Dame</p>
+        </div>
+        <div class="search-content-kate">
+            <ul class="result-list">
+                <li class="result-items-kate">
+                    <a href="produktkategorier/produktkategori-kjoler.html">
+                        <img src="images/kategoriside/dame/Kjoler.png" alt="Kjoler">
+                        <p>Kjoler</p>
+                    </a>
+                </li>
+                <li class="result-items-kate">
+                    <a href="#">
+                        <img src="images/kategoriside/dame/Strik.png" alt="Strik">
+                        <p>Strik</p>
+                    </a>
+                </li>
+                <li class="result-items-kate">
+                    <a href="#">
+                        <img src="images/kategoriside/dame/Sweater.png" alt="Sweater">
+                        <p>Sweater</p>
+                    </a>
+                </li>
+                <li class="result-items-kate">
+                    <a href="#">
+                        <img src="images/kategoriside/dame/Undertøj.png" alt="Undertøj">
+                        <p>Undertøj</p>
+                    </a>
+                </li>
+                <li class="result-items-kate">
+                    <a href="#">
+                        <img src="images/kategoriside/dame/Tshirts.png" alt="Tshirts">
+                        <p>T-shirts</p>
+                    </a>
+                </li>
+                <li class="result-items-kate">
+                    <a href="#">
+                        <img src="images/kategoriside/dame/Sæt.png" alt="Sæt">
+                        <p>Sæt</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <img src="images/logo.png" alt="logo">
+            <p class="logo-title">Green Fox</p>
+            <div class="contact">
+                <p class="first-text">Online Support:</p>
+                <p><a href="tel:+4523689764">+45 23 68 97 64</a></p>
+                <p><a href="mailto:info@greenfox.dk?subject=Spørgsmål&#10240;til&#10240;Greenfox">info@greenfox.dk</a></p>
+            </div>
+            <div class="terms">
+                <p class="first-text">Læs om handelsbetingerlser <a class="here-link" href="">her</a></p>
+                <p>Læs om fragt og returnering <a class="here-link" href="">her</a></p>
+            </div>
+            <div class="subscribe">
+                <p class="first-text">Subscribe</p>
+                <p>og del din oplevelser med os på:</p>
+            </div>
+            <div class="social-media">
+                <div class="flex-divider"></div>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <div class="flex-divider"></div>
+            </div>
+        </footer>
+    </div>
+    <div class="nav-container">
+        <nav class="nav-wrapper">
+            <div class="nav-bar">
+                <div class="nav-back-wrapper">
+                    <a href="javascript:history.back()">  
+                        <div class="nav-cat nav-cat-5items back">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-cat nav-cat-5items search" onclick="toggleSearch();">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="nav-cat nav-cat-5items home">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </div>
+                <div class="nav-cat nav-cat-5items profile">
+                    <a href="">
+                        <i class="fa-solid fa-user"></i>
+                    </a> 
+                </div>
+                <div class="nav-cat nav-cat-5items like">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body> 
+</html> 
